@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutListTop"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#E81E85">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="35dp"
+            android:onClick="backClick"
+            android:src="@mipmap/icon_back_black_user"
+            app:tint="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="50dp"
+            app:tl_textSelectColor="@color/white"
+            app:tl_textUnselectColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            tl:tl_indicator_color="#ffffff"
+            tl:tl_indicator_style="NORMAL"
+            tl:tl_indicator_width="30dp"
+            tl:tl_tab_padding="5dp"
+            tl:tl_tab_width="60dp"
+            tl:tl_textsize="15sp" />
+
+
+
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/shape_circle_12"
+            android:gravity="center"
+            android:onClick="openQuestion"
+            android:text="\?"
+            android:textColor="@color/red"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_back" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutListTop"
+        android:layout_marginBottom="10dp"
+        android:overScrollMode="never" />
+
+</LinearLayout>

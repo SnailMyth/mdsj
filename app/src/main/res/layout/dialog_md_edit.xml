@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@mipmap/img_md_edit_bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="150dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="23dp"
+            android:background="@mipmap/img_head_bg"
+            android:gravity="center"
+            android:text="我有毛豆"
+            android:textColor="#E6C738"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/saleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/ivDone"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+            <EditText
+                android:id="@+id/etSaleNum"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_md_bg"
+                android:ems="10"
+                android:hint="请输入毛豆数量"
+                android:inputType="number"
+                android:paddingStart="10dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="3dp"
+                android:paddingBottom="6dp"
+                android:textColorHint="#792E13"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.9" />
+
+            <TextView
+                android:id="@+id/saleLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="#ff792e13"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/etSaleNum"
+                app:layout_constraintStart_toStartOf="@id/etSaleNum"
+                app:layout_constraintTop_toBottomOf="@id/etSaleNum" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/priceLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/etSaleNum"
+                app:layout_constraintStart_toStartOf="@+id/etSaleNum"
+                app:layout_constraintTop_toBottomOf="@id/saleLabel">
+
+                <EditText
+                    android:id="@+id/etSalePrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@mipmap/icon_exchange_input_bg"
+                    android:gravity="start|center_vertical"
+                    android:hint="请输入摆摊价格 R/个"
+                    android:inputType="text"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
+                    android:textColor="#fff8d841"
+                    android:textColorHint="#fff8d841"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvSaleTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="3dp"
+                    android:text="合计:"
+                    android:textColor="#ff792e13"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etSalePrice" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/tvUploadQr"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:scaleType="fitXY"
+                app:riv_corner_radius="10dp"
+                android:src="@drawable/bg_upload_qr"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/priceLayout" />
+
+            <TextView
+                android:id="@+id/temp_tv_upload"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:gravity="center"
+                android:text="@string/ps_upload_qr_code"
+                android:textColor="#ff86431e"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvUploadQr"
+                app:layout_constraintEnd_toEndOf="@+id/tvUploadQr"
+                app:layout_constraintStart_toStartOf="@+id/tvUploadQr"
+                app:layout_constraintTop_toTopOf="@+id/tvUploadQr" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/buyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@id/ivDone"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+            <TextView
+                android:id="@+id/tvBuyNum"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_md_bg"
+                android:paddingStart="10dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="3dp"
+                android:paddingBottom="6dp"
+                android:textColor="#ff792e13"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.9" />
+
+            <TextView
+                android:id="@+id/tvUnitPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:textColor="#ff792e13"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@id/tvBuyNum"
+                app:layout_constraintEnd_toEndOf="@id/tvBuyNum"
+                app:layout_constraintTop_toTopOf="@id/tvBuyNum" />
+
+
+            <TextView
+                android:id="@+id/buyTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="#ff792e13"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/tvBuyNum"
+                app:layout_constraintTop_toBottomOf="@id/tvBuyNum" />
+
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivBuyQr"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="8dp"
+                android:scaleType="fitXY"
+                android:background="@drawable/bg_upload_qr"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/buyTotal"
+                app:riv_corner_radius="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="长按保存"
+                android:textColor="#ff86431e"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/ivBuyQr"
+                app:layout_constraintStart_toEndOf="@id/ivBuyQr" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="请在2小时内完成打款，并上传支付凭证，否则平台将默认放弃订购"
+                android:textColor="#ff792e13"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivBuyQr" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/ivDone"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:background="@mipmap/icon_md_on_sale"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/ivClose"
+        android:layout_width="38dp"
+        android:layout_height="35dp"
+        android:background="@mipmap/icon_exchange_close"
+        android:translationX="10dp"
+        android:translationY="-10dp"
+        app:layout_constraintEnd_toEndOf="@+id/content"
+        app:layout_constraintTop_toTopOf="@+id/content" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black2"
+    tools:context=".activity.me.UserVipActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/bg_title"
+        android:paddingTop="25dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:onClick="backClick"
+            android:src="@mipmap/return_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.flyco.tablayout.SegmentTabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.5"
+            app:tl_bar_color="@color/black_title"
+            app:tl_bar_stroke_color="@color/black_title"
+            app:tl_bar_stroke_width="0dp"
+            app:tl_divider_color="@color/black_title"
+            app:tl_indicator_color="@color/black_title"
+            app:tl_tab_padding="20dp"
+            app:tl_textSelectColor="@color/orange_lite"
+            app:tl_textUnselectColor="@color/white"
+            app:tl_textsize="15sp" />
+
+
+        <TextView
+            android:id="@+id/tvBill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:onClick="showDes"
+            android:text="开通须知"
+            android:textColor="#6A7285"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/temp_layout_1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="15dp"
+        android:background="@mipmap/icon_bank_card_bg_grey"
+        app:layout_constraintTop_toBottomOf="@id/top">
+
+
+        <com.wwsl.mdsj.views.CircleImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:elevation="2dp"
+            android:scaleType="centerCrop"
+            app:es_shape_type="round"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="3dp"
+            android:text="傻二哈"
+            android:textColor="#ffffffff"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/ivAvatar"
+            app:layout_constraintTop_toTopOf="@+id/ivAvatar" />
+
+
+        <ImageView
+            android:id="@+id/ivVip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@mipmap/icon_vip_enable"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="@+id/tvName"
+            app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+
+        <ImageView
+            android:id="@+id/ivVoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@mipmap/icon_voice_enable"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toEndOf="@+id/ivVip"
+            app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+
+        <TextView
+            android:id="@+id/btnOpen"
+            android:layout_width="70dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/bg_confirm"
+            android:backgroundTint="#F5B74B"
+            android:gravity="center"
+            android:text="立即开通"
+            android:textColor="#ffffffff"
+            android:textSize="11sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/vipLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/agreeLayout"
+        app:layout_constraintTop_toBottomOf="@id/temp_layout_1">
+
+        <TextView
+            android:id="@+id/temp_tv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:text="会员权益"
+            android:textColor="#fff95921"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/temp_iv_2"
+            android:layout_width="18dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="2dp"
+            android:background="@mipmap/icon_vip_enable"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/temp_tv_2"
+            app:layout_constraintStart_toEndOf="@+id/temp_tv_2" />
+
+
+        <TextView
+            android:id="@+id/temp_tv_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/bg_vip_text_bg"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="拥有无限上传权限，享受众粉打赏的暴击吧"
+            android:textColor="#ff6a7285"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/temp_tv_2"
+            app:layout_constraintTop_toBottomOf="@id/temp_tv_2" />
+
+        <TextView
+            android:id="@+id/temp_tv_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/bg_vip_text_bg"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="尊贵身份标示，你就是那最亮的仔"
+            android:textColor="#ff6a7285"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/temp_tv_2"
+            app:layout_constraintTop_toBottomOf="@id/temp_tv_4" />
+
+
+        <TextView
+            android:id="@+id/btnBuyVip"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_confirm"
+            android:gravity="center"
+            android:text="开通会员"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/temp_tv_6"
+            app:layout_constraintVertical_bias="0.9" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/voiceLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/agreeLayout"
+        app:layout_constraintTop_toBottomOf="@id/temp_layout_1">
+
+        <TextView
+            android:id="@+id/temp_tv_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:text="直播金话筒"
+            android:textColor="#fff95921"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/temp_iv_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@mipmap/icon_voice_enable"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@id/temp_tv_7"
+            app:layout_constraintStart_toEndOf="@id/temp_tv_7" />
+
+
+        <TextView
+            android:id="@+id/temp_tv_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/bg_vip_text_bg"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="1.直播权限：一键直播  简单助农"
+            android:textColor="#ff6a7285"
+            android:textSize="12sp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/temp_tv_7" />
+
+
+        <TextView
+            android:id="@+id/temp_tv_9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/bg_vip_text_bg"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="2.一村一品：助农带货  政策扶持"
+            android:textColor="#ff6a7285"
+            android:textSize="12sp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/temp_tv_8" />
+
+        <TextView
+            android:id="@+id/temp_tv_12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/bg_vip_text_bg"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="3.一乡一播：只为农业  流量扶持"
+            android:textColor="#ff6a7285"
+            android:textSize="12sp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/temp_tv_9" />
+
+        <TextView
+            android:id="@+id/temp_tv_13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/bg_vip_text_bg"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="4.入驻权限：上架商品  直链供应"
+            android:textColor="#ff6a7285"
+            android:textSize="12sp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/temp_tv_12" />
+
+
+        <TextView
+            android:id="@+id/temp_tv_14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/bg_vip_text_bg"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="5.带货福利：自卖省钱  分享赚钱"
+            android:textColor="#ff6a7285"
+            android:textSize="12sp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/temp_tv_13" />
+
+        <TextView
+            android:id="@+id/temp_tv_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/bg_vip_text_bg"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="6.专属培训：专业导师 快速上手"
+            android:textColor="#ff6a7285"
+            android:textSize="12sp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/temp_tv_14" />
+
+        <TextView
+            android:id="@+id/btnBuyVoice"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_confirm"
+            android:gravity="center"
+            android:text="开通金话筒"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/temp_tv_15"
+            app:layout_constraintVertical_bias="0.8" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:id="@+id/agreeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/ivAgree"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@mipmap/icon_agree_disable" />
+
+        <TextView
+            android:id="@+id/temp_tv_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:onClick="showProtocol"
+            android:text="开通会员代表您已接受"
+            android:textColor="#AAAAAA"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/temp_tv_11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showProtocol"
+            android:text="会员服务协议"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

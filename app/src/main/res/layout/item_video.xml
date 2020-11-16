@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <com.wwsl.mdsj.views.LikeView
+        android:id="@+id/likeview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@color/black">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/layout1"
+            android:layout_alignBottom="@id/layout1"
+            android:layout_alignParentBottom="true" />
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="120dp"
+            android:layout_marginBottom="18dp"
+            android:orientation="vertical">
+
+
+            <com.wwsl.mdsj.custom.DrawableTextView
+                android:id="@+id/txLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:drawablePadding="3dp"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:visibility="gone"
+                app:dt_left_drawable="@mipmap/icon_video_location"
+                app:dt_left_height="18dp"
+                app:dt_left_width="18dp" />
+
+
+            <com.wwsl.mdsj.custom.DrawableTextView
+                android:id="@+id/txGood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:drawablePadding="3dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:visibility="gone"
+                app:dt_left_drawable="@mipmap/icon_video_good"
+                app:dt_left_height="18dp"
+                app:dt_left_width="18dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/adTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="#969FA9"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:text="广告"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:visibility="visible"
+                    app:layout_constraintBaseline_toBaselineOf="@id/tv_nickname"
+                    app:layout_constraintStart_toEndOf="@+id/tv_nickname" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <com.wwsl.mdsj.views.autolinktextview.AutoLinkTextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:highlight_textcolor="@color/color_link" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/adBtnLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/adBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_confirm"
+                    android:gravity="center"
+                    android:text="@string/look_detail"
+                    android:textColor="@color/white"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/ivZn"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@mipmap/icon_zn"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.wwsl.mdsj.views.MarqueeTextView
+                android:id="@+id/tvMusicTitle"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/videoLoadingBar"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="3dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="52dp"
+                android:layout_height="62dp">
+
+                <com.wwsl.mdsj.views.CircleImageView
+                    android:id="@+id/iv_head"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:scaleType="centerCrop"
+                    app:es_shape_type="round"
+                    app:srcCompat="@mipmap/icon_avatar_placeholder" />
+
+                <ImageView
+                    android:id="@+id/iv_focus"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/add_focus" />
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/rl_like"
+                android:layout_width="80dp"
+                android:layout_height="80dp">
+
+                <ImageView
+                    android:id="@+id/iv_like"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@mipmap/icon_video_like_no"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottie_anim"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_likecount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-15dp"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_comment"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:background="@mipmap/icon_video_comment" />
+
+
+            <TextView
+                android:id="@+id/tv_commentcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_share"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:background="@mipmap/icon_video_share" />
+
+            <TextView
+                android:id="@+id/tv_sharecount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivDs"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="15dp"
+                android:background="@mipmap/icon_video_ds" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/rl_record"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginBottom="15dp">
+
+
+                <com.wwsl.mdsj.views.Music
+                    android:id="@+id/mMusic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:musicimg="@mipmap/music1" />
+
+                <com.wwsl.mdsj.views.Music2
+                    android:id="@+id/mMusic2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:musicimg="@mipmap/music2" />
+
+
+                <ImageView
+                    android:id="@+id/iv_record"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@mipmap/ic_record"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.wwsl.mdsj.views.CircleImageView
+                    android:id="@+id/iv_head_anim"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_centerInParent="true"
+                    app:ease_radius="15dp"
+                    app:es_shape_type="round"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_record"
+                    app:layout_constraintEnd_toEndOf="@id/iv_record"
+                    app:layout_constraintStart_toStartOf="@id/iv_record"
+                    app:layout_constraintTop_toTopOf="@id/iv_record" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+
+        <com.wwsl.mdsj.custom.VideoLoadingBar
+            android:id="@+id/videoLoadingBar"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            app:lb_fg_color="@color/orange_lite" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_play"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:alpha="0"
+        android:src="@mipmap/icon_play"
+        android:visibility="visible" />
+</RelativeLayout>

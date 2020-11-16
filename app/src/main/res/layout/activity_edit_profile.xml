@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title_2" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2C3241">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--    头像-->
+            <RelativeLayout
+                android:id="@+id/btn_avatar"
+                style="@style/edit_profile_group"
+                android:layout_height="75dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/black"
+                android:onClick="editProfileClick">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/edit_profile_avatar"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    tools:ignore="RelativeOverlap" />
+
+                <ImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop" />
+
+            </RelativeLayout>
+            <!--直播封面-->
+            <RelativeLayout
+                android:id="@+id/layoutCover"
+                style="@style/edit_profile_group"
+                android:layout_height="75dp"
+                android:background="@color/black"
+                android:onClick="editProfileClick">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/edit_profile_cover"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    tools:ignore="RelativeOverlap" />
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ivCover"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    app:riv_corner_radius="7dp" />
+
+            </RelativeLayout>
+            <!--昵称-->
+            <RelativeLayout
+                android:id="@+id/btn_name"
+                android:background="@color/black"
+                style="@style/edit_profile_group"
+                android:onClick="editProfileClick">
+
+                <TextView
+                    android:id="@+id/tvNameInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/edit_profile_nickname"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@id/tvNameInfo"
+                    android:drawableEnd="@mipmap/icon_right"
+                    android:drawablePadding="4dp"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+            <!--    登入账号-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/account"
+                android:background="@color/black"
+                style="@style/edit_profile_group">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit_profile_account"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txAccount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView5"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--slogan-->
+            <RelativeLayout
+                android:id="@+id/btn_sign"
+                style="@style/edit_profile_group"
+                android:background="@color/black"
+                android:onClick="editProfileClick">
+
+                <TextView
+                    android:id="@+id/tvSignInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/edit_profile_sign"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/sign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@id/tvSignInfo"
+                    android:drawableEnd="@mipmap/icon_right"
+                    android:drawablePadding="4dp"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <!--birth-->
+            <RelativeLayout
+                android:id="@+id/btn_birthday"
+                style="@style/edit_profile_group"
+                android:layout_marginTop="1dp"
+                android:background="@color/black"
+                android:onClick="editProfileClick">
+
+                <TextView
+                    android:id="@+id/tvBirthdayInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/edit_profile_birthday"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/birthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@id/tvBirthdayInfo"
+                    android:drawableEnd="@mipmap/icon_right"
+                    android:drawablePadding="4dp"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+            <!--sex-->
+            <RelativeLayout
+                android:id="@+id/btn_sex"
+                style="@style/edit_profile_group"
+                android:background="@color/black"
+                android:onClick="editProfileClick">
+
+                <TextView
+                    android:id="@+id/tvSexInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/edit_profile_sex"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@id/tvSexInfo"
+                    android:drawableEnd="@mipmap/icon_right"
+                    android:drawablePadding="4dp"
+                    android:gravity="end"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+            <!--身高-->
+            <RelativeLayout
+                android:id="@+id/btnHeight"
+                android:visibility="gone"
+                style="@style/edit_profile_group"
+                android:onClick="editProfileClick">
+
+                <TextView
+                    android:id="@+id/tvHeightInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/edit_profile_height"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/txHeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@id/tvHeightInfo"
+                    android:drawableEnd="@mipmap/icon_right"
+                    android:drawablePadding="4dp"
+                    android:gravity="end"
+                    android:textColor="@color/textColorA"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <!--职业-->
+            <RelativeLayout
+                android:id="@+id/btnOccupation"
+                style="@style/edit_profile_group"
+                android:visibility="gone"
+                android:onClick="editProfileClick">
+
+                <TextView
+                    android:id="@+id/tvOccupationInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/edit_profile_occupation"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/txOccupation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@id/tvOccupationInfo"
+                    android:drawableEnd="@mipmap/icon_right"
+                    android:drawablePadding="4dp"
+                    android:gravity="end"
+                    android:textColor="@color/textColorA"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <!--年薪-->
+            <RelativeLayout
+                android:id="@+id/btnSalary"
+                style="@style/edit_profile_group"
+                android:visibility="gone"
+                android:onClick="editProfileClick">
+
+                <TextView
+                    android:id="@+id/tvSalaryInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/edit_profile_salary"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/txIncome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@id/tvSalaryInfo"
+                    android:drawableEnd="@mipmap/icon_right"
+                    android:drawablePadding="4dp"
+                    android:gravity="end"
+                    android:textColor="@color/textColorA"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <!--location-->
+            <RelativeLayout
+                android:id="@+id/layoutCity"
+                style="@style/edit_profile_group"
+                android:visibility="visible"
+                android:background="@color/black"
+                android:onClick="editProfileClick">
+
+                <TextView
+                    android:id="@+id/tvCityTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/hometown"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/txMainCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@id/tvCityTitle"
+                    android:drawableEnd="@mipmap/icon_right"
+                    android:drawablePadding="4dp"
+                    android:gravity="end"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btn_impression"
+                style="@style/edit_profile_group"
+                android:onClick="editProfileClick"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/edit_profile_impression"
+                    android:textColor="@color/gray3"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

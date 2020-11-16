@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/icon_md_change_bg"
+    tools:context=".activity.maodou.StallExchangeActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/inputLayout"
+        android:layout_width="291dp"
+        android:layout_height="272dp"
+        android:layout_marginBottom="10dp"
+        android:background="@mipmap/img_exchange_input_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/txTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:shadowColor="#59000000"
+            android:shadowDx="0"
+            android:shadowDy="2"
+            android:shadowRadius="3.0"
+            android:text="豆丁/毛豆兑换"
+            android:textColor="#fff8d73c"
+            android:textSize="21sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvDialogWord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:text="客官想要以多少豆丁换一个毛豆呢？"
+            android:textColor="#ff792e13"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/txTitle"
+            tools:layout_editor_absoluteX="40dp" />
+
+
+        <!--            step1-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/step1Layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="20dp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/tvDialogWord">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etSalePrice"
+                android:layout_width="173dp"
+                android:layout_height="match_parent"
+                android:background="@mipmap/icon_exchange_input_bg"
+                android:gravity="start|center_vertical"
+                android:inputType="textPersonName"
+                android:paddingStart="20dp"
+                android:paddingEnd="0dp"
+                android:textColor="#fff8d841"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tvPer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="豆丁/毛豆"
+                android:textColor="#ff5d4238"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/etSalePrice"
+                app:layout_constraintStart_toEndOf="@id/etSalePrice"
+                app:layout_constraintTop_toTopOf="@id/etSalePrice" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--            step2-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/step2Layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="23dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/tvDialogWord">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etNum"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/icon_exchange_input_bg"
+                android:gravity="start|center_vertical"
+                android:inputType="number"
+                android:paddingStart="20dp"
+                android:paddingEnd="0dp"
+                android:textColor="#fff8d841"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:text="个"
+                android:textColor="#fff8d841"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/etNum"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--            step3-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/step3Layout"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="23dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/tvDialogWord">
+
+
+            <ImageView
+                android:id="@+id/ivImg"
+                android:layout_width="50dp"
+                android:layout_height="41dp"
+                android:background="@mipmap/icon_img_dd"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tvFinishNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="+198"
+                android:textColor="#ff792e13"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/ivImg"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/tvBottom"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="24dp"
+            android:background="@mipmap/img_exchange_btn_bg"
+            android:onClick="nextStep"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="38dp"
+        android:layout_height="35dp"
+        android:background="@mipmap/icon_exchange_close"
+        android:onClick="backClick"
+        android:translationX="10dp"
+        android:translationY="-10dp"
+        app:layout_constraintEnd_toEndOf="@id/inputLayout"
+        app:layout_constraintTop_toTopOf="@id/inputLayout" />
+
+
+
+
+    <ImageView
+        android:id="@+id/ivLeft"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="backClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/icon_stall_left_arrow" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

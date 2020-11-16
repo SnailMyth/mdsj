@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <bitmap
+            android:antialias="true"
+            android:dither="true"
+            android:filter="true"
+            android:gravity="top"
+            android:mipMap="true"
+            android:src="@mipmap/launch_bg2"
+            android:tileMode="disabled"/>
+    </item>
+
+    <!--    src	在这里引用图片资源-->
+    <!--    antialias	开启或关闭抗锯齿-->
+    <!--    dither	开启或关闭图像抖动。当使用图片的dpi和屏幕不匹配时，开启图像抖动可以获得更好的显示效果-->
+    <!--    filter	开启或关闭滤镜。当需要对图片进行缩放操作时，开启滤镜可以使图片更加平滑-->
+    <!--    tiltMode	贴图模式。详细见下文。该属性与gravity是互斥的。-->
+    <!--    gravity	重心。详细见下文。该属性与tileMode是互斥的。-->
+    <!--    tint	设置着色。有种盖一个色层在图片上的感觉。-->
+    <!--    tintMode	设置着色模式。详细见下文。-->
+    <!--    mipMap	是否将图片标记为mipmap，使用mipmap能够提高显示性能，默认为false-->
+
+
+</layer-list>

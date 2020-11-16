@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black2"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/im_msg"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:onClick="backClick"
+            android:padding="9dp"
+            android:src="@mipmap/icon_back"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/btn_ignore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:text="@string/im_msg_ignore_unread"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <View style="@style/line2" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never" />
+
+        <!--        <RelativeLayout-->
+        <!--            android:id="@+id/btn_system_msg"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="70dp"-->
+        <!--            android:background="@color/white">-->
+
+        <!--            <com.makeramen.roundedimageview.RoundedImageView-->
+        <!--                android:id="@+id/avatar"-->
+        <!--                android:layout_width="44dp"-->
+        <!--                android:layout_height="44dp"-->
+        <!--                android:layout_centerVertical="true"-->
+        <!--                android:layout_marginStart="12dp"-->
+        <!--                android:layout_marginEnd="6dp"-->
+        <!--                android:scaleType="center"-->
+        <!--                android:src="@mipmap/ic_launcher_sys_msg"-->
+        <!--                app:riv_oval="true" />-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/name"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_alignTop="@id/avatar"-->
+        <!--                android:layout_marginTop="2dp"-->
+        <!--                android:layout_toRightOf="@id/avatar"-->
+        <!--                android:ellipsize="end"-->
+        <!--                android:singleLine="true"-->
+        <!--                android:text="@string/im_system_msg"-->
+        <!--                android:textColor="@color/textColor3"-->
+        <!--                android:textSize="16sp" />-->
+
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/msg"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_alignBottom="@id/avatar"-->
+        <!--                android:layout_marginEnd="80dp"-->
+        <!--                android:layout_marginBottom="2dp"-->
+        <!--                android:layout_toRightOf="@id/avatar"-->
+        <!--                android:ellipsize="end"-->
+        <!--                android:singleLine="true"-->
+        <!--                android:textColor="#ACACAC"-->
+        <!--                android:textSize="14sp" />-->
+
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/time"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_alignTop="@id/name"-->
+        <!--                android:layout_alignParentEnd="true"-->
+        <!--                android:layout_marginTop="3dp"-->
+        <!--                android:layout_marginEnd="12dp"-->
+        <!--                android:textColor="@color/textColorC"-->
+        <!--                android:textSize="12sp" />-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/red_point"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="14dp"-->
+        <!--                android:layout_below="@id/time"-->
+        <!--                android:layout_alignParentEnd="true"-->
+        <!--                android:layout_marginTop="5dp"-->
+        <!--                android:layout_marginEnd="12dp"-->
+        <!--                android:background="@drawable/bg_red_point"-->
+        <!--                android:gravity="center"-->
+        <!--                android:includeFontPadding="false"-->
+        <!--                android:minWidth="14dp"-->
+        <!--                android:paddingLeft="3dp"-->
+        <!--                android:paddingRight="3dp"-->
+        <!--                android:textColor="#fff"-->
+        <!--                android:textSize="10sp"-->
+        <!--                android:visibility="invisible" />-->
+
+
+        <!--            <View-->
+        <!--                style="@style/line2"-->
+        <!--                android:layout_alignParentBottom="true" />-->
+
+        <!--        </RelativeLayout>-->
+
+    </RelativeLayout>
+
+</LinearLayout>

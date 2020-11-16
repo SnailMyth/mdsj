@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemRoot"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@mipmap/icon_task_mw_bg">
+
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        app:srcCompat="@mipmap/icon_task_item_thumb_1" />
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="体验秘籍"
+        android:textColor="#ffffffff"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/buyPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="体验1/1"
+        android:textColor="#ffffffff"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/title"
+        app:layout_constraintStart_toEndOf="@id/title" />
+
+
+    <TextView
+        android:id="@+id/temp_tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="拥有所需:"
+        android:textColor="#ffffffff"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+
+    <TextView
+        android:id="@+id/needNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="0.00颗"
+        android:textColor="#ffffffff"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/temp_tv_2"
+        app:layout_constraintStart_toEndOf="@id/temp_tv_2" />
+
+
+    <TextView
+        android:id="@+id/temp_tv_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="完成收豆:"
+        android:textColor="#ffffffff"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@id/temp_tv_2" />
+
+
+    <TextView
+        android:id="@+id/haveGetNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="0.00颗"
+        android:textColor="#ffffffff"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/temp_tv_3"
+        app:layout_constraintStart_toEndOf="@id/temp_tv_3" />
+
+    <TextView
+        android:id="@+id/temp_tv_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="完成方式:"
+        android:textColor="#ffffffff"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@id/temp_tv_3" />
+
+
+    <TextView
+        android:id="@+id/taskDes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="每天观看5分钟视频"
+        android:textColor="#ffffffff"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/temp_tv_4"
+        app:layout_constraintStart_toEndOf="@+id/temp_tv_4"
+        app:layout_constraintTop_toBottomOf="@id/temp_tv_3" />
+
+    <TextView
+        android:id="@+id/btnBuy"
+        android:layout_width="60dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/btn_mw_get"
+        android:gravity="center"
+        android:text="拥有"
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/iv_img"
+        app:layout_constraintTop_toBottomOf="@id/iv_img" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

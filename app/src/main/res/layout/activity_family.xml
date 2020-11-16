@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black2"
+    tools:context=".activity.maodou.FamilyActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/bg_title"
+        android:paddingTop="25dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:onClick="backClick"
+            android:src="@mipmap/return_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/me_md_family"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_share"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:onClick="openShareWindow"
+            android:src="@mipmap/icon_white_share"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvBill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:onClick="showDes"
+            android:text="活跃度说明"
+            android:textColor="#6A7285"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top">
+
+        <com.wwsl.mdsj.views.CircleImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="30dp"
+            android:elevation="2dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_default_active_avatar"
+            app:es_shape_type="round"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/temp_iv_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivProofread"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:elevation="2dp"
+            android:onClick="proofread"
+            android:src="@mipmap/icon_varify"
+            android:translationX="22dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/ivAvatar"
+            app:layout_constraintTop_toTopOf="@+id/ivAvatar" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxWidth="120dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/ivAvatar"
+            app:layout_constraintStart_toStartOf="@+id/ivAvatar"
+            app:layout_constraintTop_toBottomOf="@+id/ivAvatar" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/centerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/shape_bg_border_20"
+            android:backgroundTint="#ff202125"
+            app:layout_constraintTop_toBottomOf="@+id/tvName">
+
+            <TextView
+                android:id="@+id/tvLabel1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="联盟活跃度"
+                android:textColor="#B8B8B8"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tvLabel2"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tvLabel2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="英雄活跃度"
+                android:textColor="#B8B8B8"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tvLabel3"
+                app:layout_constraintStart_toEndOf="@id/tvLabel1" />
+
+            <TextView
+                android:id="@+id/tvLabel3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="家族活跃度"
+                android:textColor="#B8B8B8"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvLabel2" />
+
+            <TextView
+                android:id="@+id/num1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lines="1"
+                android:text="0.00"
+                android:textColor="#ffffffff"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@id/tvLabel1"
+                app:layout_constraintEnd_toEndOf="@id/tvLabel1"
+                app:layout_constraintStart_toStartOf="@id/tvLabel1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/num2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lines="1"
+                android:text="0"
+                android:textColor="#ffffffff"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@id/tvLabel2"
+                app:layout_constraintEnd_toEndOf="@id/tvLabel2"
+                app:layout_constraintStart_toStartOf="@id/tvLabel2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/num3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lines="1"
+                android:text="0"
+                android:textColor="#ffffffff"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@id/tvLabel3"
+                app:layout_constraintEnd_toEndOf="@id/tvLabel3"
+                app:layout_constraintStart_toStartOf="@id/tvLabel3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tl_tab_space_equal="true"
+            app:tl_indicator_width_equal_title="true"
+            app:layout_constraintTop_toBottomOf="@id/centerLayout"
+            app:tl_indicator_color="#F95921"
+            app:tl_indicator_gravity="BOTTOM"
+            app:tl_indicator_style="NORMAL"
+            app:tl_tab_padding="5dp"
+            app:tl_textSelectColor="@color/white"
+            app:tl_textUnselectColor="@color/white"
+            app:tl_textsize="15sp" />
+
+        <View
+            android:id="@+id/view3"
+            style="@style/line2"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/tabLayout"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/temp_tv_1"
+            android:layout_width="54dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="50dp"
+            android:text="个人基活"
+            android:textColor="#ff808080"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/temp_tv_2" />
+
+        <TextView
+            android:id="@+id/temp_tv_2"
+            android:layout_width="54dp"
+            android:layout_height="19dp"
+            android:layout_marginTop="10dp"
+            android:text="家族总活"
+            android:textColor="#ff808080"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toStartOf="@+id/textView25"
+            app:layout_constraintStart_toEndOf="@+id/temp_tv_1"
+            app:layout_constraintTop_toBottomOf="@id/view3" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="61dp"
+            android:layout_height="19dp"
+            android:layout_marginEnd="40dp"
+            android:text="全部/有效"
+            android:textColor="#ff808080"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/temp_tv_2" />
+
+
+        <View
+            android:id="@+id/view1"
+            style="@style/line2"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/temp_tv_2"
+            tools:ignore="MissingConstraints" />
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="11dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/temp_tv_2" />
+
+
+        <ImageView
+            android:id="@+id/temp_iv_1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:layout_constraintBottom_toTopOf="@+id/tvName"
+            app:layout_constraintEnd_toStartOf="@+id/ivAvatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivAvatar"
+            app:srcCompat="@mipmap/icon_friend_num_bg" />
+
+        <TextView
+            android:id="@+id/txFamilyNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/temp_iv_1"
+            app:layout_constraintEnd_toEndOf="@+id/temp_iv_1"
+            app:layout_constraintStart_toStartOf="@+id/temp_iv_1"
+            app:layout_constraintTop_toTopOf="@+id/temp_iv_1" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="活跃好友"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/temp_iv_1"
+            app:layout_constraintStart_toStartOf="@+id/temp_iv_1"
+            app:layout_constraintTop_toBottomOf="@+id/temp_iv_1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

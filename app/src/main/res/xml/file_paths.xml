@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <root-path
+        name="root"
+        path="" />
+    <files-path
+        name="files"
+        path="/files" />
+    <cache-path
+        name="cache"
+        path="/cache" />
+    <external-files-path
+        name="external_file_path"
+        path="/data/files" />
+    <external-cache-path
+        name="external_cache_path"
+        path="/data/cache" />
+    <!--external-path标签用来指定Uri共享的，name属性的值可以自定义，
+    path属性的值表示共享的具体位置，设置为空，就表示共享整个SD卡-->
+    <external-path
+        name="external"
+        path="phonelive" />
+
+    <!-- 这个下载路径也不可以修改，必须为 -->
+    <!--为了适配所有路径可以设置 path = "." -->
+    <external-path
+        name="zj_sdk__external_root"
+        path="." />
+    <external-cache-path
+        name="zj_sdk_download_path"
+        path="Download" />
+    <external-path
+        name="zj_sdk_download"
+        path="Download" />
+
+    <external-cache-path
+        name="gdt_sdk_download_path1"
+        path="com_qq_e_download" />
+    <cache-path
+        name="gdt_sdk_download_path2"
+        path="com_qq_e_download" />
+</paths>

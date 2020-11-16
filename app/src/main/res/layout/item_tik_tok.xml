@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.dueeeke.videoplayer.player.VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.wwsl.mdsj.views.TikTokView
+        android:id="@+id/tiktok_View"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>

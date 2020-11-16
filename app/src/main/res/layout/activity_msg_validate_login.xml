@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".activity.login.MsgValidateLoginActivity">
+
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="54dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="37dp"
+        android:text="@string/validate_code"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvBack"
+        android:layout_width="9dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="13dp"
+        android:background="@mipmap/icon_back_white"
+        android:onClick="backClick"
+        app:layout_constraintBaseline_toBaselineOf="@id/textView11"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <com.wwsl.mdsj.views.PasswordView
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="45dp"
+        app:bg_Color="@color/white"
+        app:cipherEnable="false"
+        app:cipherTextColor="#F97F21"
+        app:cursorColor="#F97F21"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:mode="rect"
+        app:passwordLength="4"
+        app:passwordPadding="27dp"
+        app:rect_radius="5dp" />
+
+    <TextView
+        android:id="@+id/btnTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/shape_stroke_orange_1"
+        android:gravity="center_vertical"
+        android:onClick="registerClick"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="5dp"
+        android:text="@string/reg_get_code_again"
+        android:textColor="#F95921"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="96dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/reg_input_code"
+        android:textColor="#ff8d8d8d"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTime" />
+
+    <TextView
+        android:id="@+id/btn_account_login"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="137dp"
+        android:background="@drawable/login_btn"
+        android:gravity="center"
+        android:onClick="loginClick"
+        android:text="@string/login_immediately_login"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+    <LinearLayout
+        android:id="@+id/agreeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/ivAgree"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/icon_agree_enable"
+            android:onClick="agreeProtocal" />
+
+        <TextView
+            android:id="@+id/temp_tv_10"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical"
+            android:onClick="showProtocol"
+            android:text="@string/login_tip_1"
+            android:textColor="#AAAAAA"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/temp_tv_11"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:onClick="showProtocol"
+            android:text="@string/login_tip_2"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

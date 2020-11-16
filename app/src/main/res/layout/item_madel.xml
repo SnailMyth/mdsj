@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black2">
+
+    <ImageView
+        android:id="@+id/ivMadel"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/img_default_bg" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivMadel"
+        app:layout_constraintStart_toStartOf="@+id/ivMadel"
+        app:layout_constraintTop_toBottomOf="@+id/ivMadel" />
+
+    <TextView
+        android:id="@+id/tvQues"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="3dp"
+        android:background="@drawable/bg_circle_wenhao"
+        android:gravity="center"
+        android:text="@string/wenhao"
+        android:textColor="@color/white"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/ivMadel"
+        app:layout_constraintStart_toEndOf="@+id/ivMadel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.MainHomeFragment">
+
+
+    <com.wwsl.mdsj.custom.SimpleViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/clickLive"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_main_live"
+            android:visibility="invisible" />
+
+        <com.flyco.tablayout.CommonTabLayout
+            android:id="@+id/tab_title"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            app:tl_iconHeight="51dp"
+            app:tl_iconWidth="34dp"
+            app:tl_indicator_color="@color/orange_lite"
+            app:tl_indicator_width="35dp"
+            app:tl_tab_padding="10dp"
+            app:tl_tab_space_equal="true"
+            app:tl_textSelectColor="@color/orange_lite"
+            app:tl_textsize="1sp"
+            app:tl_underline_color="@color/orange_lite" />
+
+
+        <ImageView
+            android:id="@+id/btnSearch"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:background="@mipmap/iv_search" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_aixin"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/main_home_aixin"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/relativeLayout" />
+
+    <io.netopen.hotbitmapgg.library.view.RingProgressBar
+        android:id="@+id/taskPb"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/relativeLayout"
+        app:max="100"
+        app:ringColor="#70000000"
+        app:ringProgressColor="@color/global"
+        app:ringWidth="3dp"
+        app:style="STROKE"
+        app:textIsShow="false" />
+
+    <TextView
+        android:id="@+id/tvTimes"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/taskPb"
+        app:layout_constraintEnd_toEndOf="@id/taskPb"
+        app:layout_constraintStart_toStartOf="@id/taskPb"
+        app:layout_constraintTop_toTopOf="@id/taskPb" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

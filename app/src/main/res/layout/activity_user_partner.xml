@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black2"
+    tools:context=".activity.UserPartnerActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/bg_title"
+        android:paddingTop="25dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:onClick="backClick"
+            android:src="@mipmap/return_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/title1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/apply_partner"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/ivQu"
+        android:layout_width="110dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="48dp"
+        android:onClick="chooseQu"
+        app:layout_constraintEnd_toStartOf="@+id/ivShi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top"
+        app:srcCompat="@mipmap/icon_partner_qu" />
+
+    <TextView
+        android:id="@+id/tvQues1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/bg_circle_wenhao"
+        android:gravity="center"
+        android:onClick="showDes"
+        android:text="@string/wenhao"
+        android:textColor="@color/white"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/ivQu"
+        app:layout_constraintStart_toEndOf="@+id/ivQu" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="区县代理"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivQu"
+        app:layout_constraintStart_toStartOf="@+id/ivQu"
+        app:layout_constraintTop_toBottomOf="@+id/ivQu" />
+
+
+    <ImageView
+        android:id="@+id/ivShi"
+        android:layout_width="110dp"
+        android:layout_height="130dp"
+        android:onClick="chooseShi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivQu"
+        app:layout_constraintTop_toTopOf="@+id/ivQu"
+        app:srcCompat="@mipmap/icon_partner_shi" />
+
+    <TextView
+        android:id="@+id/tvQues2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/bg_circle_wenhao"
+        android:gravity="center"
+        android:onClick="showDes"
+        android:text="@string/wenhao"
+        android:textColor="@color/white"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/ivShi"
+        app:layout_constraintStart_toEndOf="@id/ivShi" />
+
+    <TextView
+        android:id="@+id/temp_tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="市级代理"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+
+        app:layout_constraintEnd_toEndOf="@+id/ivShi"
+        app:layout_constraintStart_toStartOf="@+id/ivShi"
+        app:layout_constraintTop_toBottomOf="@+id/ivShi" />
+
+
+    <ImageView
+        android:id="@+id/ivSheng"
+        android:layout_width="110dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="40dp"
+        android:onClick="chooseSheng"
+        app:layout_constraintEnd_toEndOf="@+id/ivQu"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ivQu"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:srcCompat="@mipmap/icon_partner_sheng" />
+
+
+    <TextView
+        android:id="@+id/tvQues3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/bg_circle_wenhao"
+        android:gravity="center"
+        android:onClick="showDes"
+        android:text="@string/wenhao"
+        android:textColor="@color/white"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/ivSheng"
+        app:layout_constraintStart_toEndOf="@id/ivSheng" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="80dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="10dp"
+        android:text="省级代理"
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivQu"
+        app:layout_constraintStart_toStartOf="@+id/ivQu"
+        app:layout_constraintTop_toBottomOf="@+id/ivSheng" />
+
+
+    <ImageView
+        android:id="@+id/ivDaqu"
+        android:layout_width="110dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="40dp"
+        android:onClick="chooseDaQu"
+        app:layout_constraintEnd_toEndOf="@+id/ivShi"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ivShi"
+        app:layout_constraintTop_toBottomOf="@+id/temp_tv_2"
+        app:srcCompat="@mipmap/icon_partner_bigqu" />
+
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="10dp"
+        android:text="大区代理"
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivDaqu"
+        app:layout_constraintStart_toStartOf="@+id/ivDaqu"
+        app:layout_constraintTop_toBottomOf="@+id/ivDaqu" />
+
+
+    <TextView
+        android:id="@+id/tvQues4"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/bg_circle_wenhao"
+        android:gravity="center"
+        android:onClick="showDes"
+        android:text="@string/wenhao"
+        android:textColor="@color/white"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/ivDaqu"
+        app:layout_constraintStart_toEndOf="@id/ivDaqu" />
+
+    <TextView
+        android:id="@+id/temp_tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:text="温馨提示:"
+        android:textColor="@color/yellow2"
+        android:textSize="15sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView19" />
+
+    <TextView
+        android:id="@+id/tvTips"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/yellow2"
+        android:textSize="15sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/temp_tv_1"
+        app:layout_constraintVertical_bias="0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/live_record_no_title"
+        android:singleLine="true"
+        android:textColor="@color/gray1"
+        android:textColorHint="@color/textColor3"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="3dp"
+        android:textColor="@color/textColorB"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/duration"
+        android:layout_alignBaseline="@id/time"
+        android:layout_toEndOf="@id/time"
+        android:layout_marginStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textColorB"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/title"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/textColor3"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/time"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:text="@string/live_record_watch"
+        android:textColor="@color/textColorB"
+        android:textSize="12sp" />
+
+    <View
+        android:id="@+id/tvDivider"
+        style="@style/line2"
+        android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:id="@+id/votes"
+        android:layout_alignBaseline="@id/title"
+        android:layout_toEndOf="@id/title"
+        android:layout_marginStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textColorB"
+        android:textSize="12sp"/>
+
+</RelativeLayout>

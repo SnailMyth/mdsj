@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black2"
+    android:orientation="vertical"
+    tools:context=".activity.HuoYueActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/bg_title"
+        android:paddingTop="30dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:onClick="backClick"
+            android:src="@mipmap/return_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.flyco.tablayout.SegmentTabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.6"
+            app:tl_bar_color="@color/black_title"
+            app:tl_bar_stroke_color="@color/black_title"
+            app:tl_bar_stroke_width="0dp"
+            app:tl_divider_color="@color/black_title"
+            app:tl_indicator_color="@color/black_title"
+            app:tl_tab_padding="20dp"
+            app:tl_textSelectColor="@color/orange_lite"
+            app:tl_textUnselectColor="@color/white"
+            app:tl_textsize="15sp" />
+
+
+        <TextView
+            android:id="@+id/tvLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:onClick="jumpLevel"
+            android:text="@string/level"
+            android:textColor="#6A7285"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteY="11dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mdLayout"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/shape_bg_border_20"
+        android:backgroundTint="#2C3241"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tvLabel1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="剩余收豆"
+            android:textColor="@color/orange_lite"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@id/num1"
+            app:layout_constraintStart_toStartOf="@id/num1"
+            app:layout_constraintTop_toBottomOf="@id/num1" />
+
+        <TextView
+            android:id="@+id/tvLabel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="今日所得"
+            android:textColor="#6A7285"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@id/num2"
+            app:layout_constraintStart_toStartOf="@id/num2"
+            app:layout_constraintTop_toTopOf="@id/tvLabel1" />
+
+        <TextView
+            android:id="@+id/tvLabel3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="已冻结"
+            android:textColor="#6A7285"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/num3"
+            app:layout_constraintStart_toStartOf="@+id/num3"
+            app:layout_constraintTop_toBottomOf="@id/num3" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/num2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvLabel5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的毛豆:"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/num4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:gravity="center"
+                android:lines="1"
+                android:maxWidth="120dp"
+                android:textColor="#ffffffff"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/num1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:lines="2"
+            android:maxEms="8"
+            android:maxWidth="120dp"
+            android:textColor="@color/orange_lite"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/num2"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/num2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lines="2"
+            android:maxEms="8"
+            android:maxWidth="120dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@id/num3"
+            app:layout_constraintStart_toEndOf="@id/num1"
+            app:layout_constraintTop_toTopOf="@id/num1" />
+
+        <TextView
+            android:id="@+id/num3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lines="2"
+            android:maxEms="8"
+            android:maxWidth="120dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/num2"
+            app:layout_constraintTop_toTopOf="@+id/num1" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/hyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/shape_bg_border_20"
+        android:backgroundTint="#2C3241"
+        android:visibility="gone">
+
+
+        <TextView
+            android:id="@+id/num5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:maxWidth="80dp"
+            android:textColor="#ffffffff"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toStartOf="@id/num6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvLabel11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:text="我的活跃度"
+            android:textColor="#6A7285"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@id/num5"
+            app:layout_constraintStart_toStartOf="@id/num5"
+            app:layout_constraintTop_toBottomOf="@id/num5" />
+
+
+        <TextView
+            android:id="@+id/num6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxWidth="80dp"
+            android:textColor="#ffffffff"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toStartOf="@id/num7"
+            app:layout_constraintStart_toEndOf="@id/num5"
+            app:layout_constraintTop_toTopOf="@+id/num5"
+            app:layout_constraintVertical_bias="0.5" />
+<!--基础活跃度-->
+        <TextView
+            android:id="@+id/tvLabel12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:text="直邀奖励"
+            android:textColor="#6A7285"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@id/num6"
+            app:layout_constraintStart_toStartOf="@id/num6"
+            app:layout_constraintTop_toBottomOf="@id/num6" />
+
+
+        <TextView
+            android:id="@+id/num7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxWidth="80dp"
+            android:textColor="#ffffffff"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/num6"
+            app:layout_constraintTop_toTopOf="@id/num6"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/tvLabel13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:text="加成福利"
+            android:textColor="#6A7285"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@id/num7"
+            app:layout_constraintStart_toStartOf="@id/num7"
+            app:layout_constraintTop_toBottomOf="@id/num7" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvLabel4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="我的活跃记录"
+        android:textColor="#fff95921"
+        android:textSize="18sp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/recyclerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp">
+
+        <com.yanzhenjie.recyclerview.SwipeRecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_active" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

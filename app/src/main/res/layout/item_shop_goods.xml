@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:layout_marginBottom="1dp"
+    android:background="@color/black2">
+
+
+    <com.wwsl.mdsj.custom.RatioRoundImageView
+        android:id="@+id/ivThumb"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="15dp"
+        android:scaleType="fitXY"
+        app:corner_radius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:ri_ratio="1"
+        app:riv_corner_radius="5dp"
+        app:srcCompat="@mipmap/icon_active_thumb_default" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:ellipsize="end"
+        android:lines="2"
+        android:maxWidth="185dp"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@id/ivThumb"
+        app:layout_constraintTop_toTopOf="@id/ivThumb" />
+
+    <TextView
+        android:id="@+id/saleNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="已售:"
+        android:textColor="#ffcdcccb"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/temp_tv_1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="3dp"-->
+<!--        android:text="赚"-->
+<!--        android:textColor="#ffcdcccb"-->
+<!--        android:textSize="13sp"-->
+<!--        app:layout_constraintStart_toStartOf="@id/title"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/saleNum" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/getMoney"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="5dp"-->
+<!--        android:text="6.11"-->
+<!--        android:textColor="#fff95921"-->
+<!--        android:textSize="14sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/temp_tv_1"-->
+<!--        app:layout_constraintStart_toEndOf="@id/temp_tv_1"-->
+<!--        app:layout_constraintTop_toTopOf="@id/temp_tv_1" />-->
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="售价："
+        android:textColor="#ffcdcccb"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/saleNum" />
+
+    <ImageView
+        android:id="@+id/ivCollect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title"
+        app:srcCompat="@mipmap/icon_goods_uncollect" />
+
+
+    <TextView
+        android:id="@+id/btnAdd"
+        android:layout_width="65dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/bg_confirm"
+        android:gravity="center"
+        android:text="添加"
+        android:textColor="#ffffffff"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivThumb"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

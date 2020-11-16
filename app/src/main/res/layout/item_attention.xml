@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="85dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:background="@color/black">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="15dp"
+        android:scaleType="centerCrop"
+        app:riv_oval="true" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@id/avatar"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:maxWidth="180dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_toEndOf="@id/avatar"
+        android:layout_toStartOf="@id/tvFocus"
+        android:layout_below="@id/name"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/textColor9"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/sex"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignTop="@id/name"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@id/name" />
+
+    <ImageView
+        android:id="@+id/level"
+        android:layout_width="30dp"
+        android:layout_height="15dp"
+        android:layout_alignTop="@id/sex"
+        android:layout_marginStart="5dp"
+        android:layout_toRightOf="@id/sex"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/tvFocus"
+        android:layout_width="80dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/shape_follow_btn"
+        android:gravity="center"
+        android:text="回关"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/textColor6" />
+
+</RelativeLayout>

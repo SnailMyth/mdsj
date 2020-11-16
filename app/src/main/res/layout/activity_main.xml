@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    tools:context=".activity.MainActivity">
+
+    <com.wwsl.mdsj.custom.MyViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tab_group"
+        app:canScroll="false" />
+
+    <com.wwsl.mdsj.custom.TabButtonGroup
+        android:id="@+id/tab_group"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+        <com.wwsl.mdsj.custom.TabButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:tbn_checked="true"
+            app:tbn_icon_size="26dp"
+            app:tbn_selected_icon="@mipmap/icon_main_home_1"
+            app:tbn_text_color_select="@color/main_bottom_text_color_select"
+            app:tbn_text_color_un_select="@color/main_bottom_text_color_un_select"
+            app:tbn_text_size="11sp"
+            app:tbn_tip="@string/main_home"
+            app:tbn_unselected_icon="@mipmap/icon_main_home_0" />
+
+        <com.wwsl.mdsj.custom.TabButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:tbn_icon_size="26dp"
+            app:tbn_selected_icon="@mipmap/icon_main_near_1"
+            app:tbn_text_color_select="@color/main_bottom_text_color_select"
+            app:tbn_text_color_un_select="@color/main_bottom_text_color_un_select"
+            app:tbn_text_size="11sp"
+            app:tbn_tip="@string/hometown"
+            app:tbn_unselected_icon="@mipmap/icon_main_near_0" />
+
+        <com.wwsl.mdsj.custom.TabButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:tbn_have_layout="false"
+            app:tbn_icon_size="43dp"
+            app:tbn_selected_icon="@mipmap/icon_main_camera_start"
+            app:tbn_text_color_select="@color/main_bottom_text_color_select"
+            app:tbn_text_color_un_select="@color/main_bottom_text_color_un_select"
+            app:tbn_text_size="11sp"
+            app:tbn_unselected_icon="@mipmap/icon_main_camera_start" />
+
+        <com.wwsl.mdsj.custom.TabButton
+            android:id="@+id/tabMessage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:tbn_icon_size="26dp"
+            app:tbn_selected_icon="@mipmap/icon_main_msg_1"
+            app:tbn_text_color_select="@color/main_bottom_text_color_select"
+            app:tbn_text_color_un_select="@color/main_bottom_text_color_un_select"
+            app:tbn_text_size="11sp"
+            app:tbn_tip="@string/main_msg"
+            app:tbn_unselected_icon="@mipmap/icon_main_msg_0" />
+
+        <com.wwsl.mdsj.custom.TabButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:tbn_icon_size="26dp"
+            app:tbn_selected_icon="@mipmap/icon_main_me_1"
+            app:tbn_text_color_select="@color/main_bottom_text_color_select"
+            app:tbn_text_color_un_select="@color/main_bottom_text_color_un_select"
+            app:tbn_text_size="11sp"
+            app:tbn_tip="@string/main_me"
+            app:tbn_unselected_icon="@mipmap/icon_main_me_0" />
+    </com.wwsl.mdsj.custom.TabButtonGroup>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/downloadLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:background="@drawable/shape_bg_grey_stroke_radius_10"
+            android:backgroundTint="#40000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <io.netopen.hotbitmapgg.library.view.RingProgressBar
+                android:id="@+id/loadPb"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:max="100"
+                app:ringColor="#40000000"
+                app:ringProgressColor="@color/orange_lite"
+                app:ringWidth="5dp"
+                app:style="STROKE"
+                app:textColor="@color/white"
+                app:textIsShow="true"
+                app:textSize="30sp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

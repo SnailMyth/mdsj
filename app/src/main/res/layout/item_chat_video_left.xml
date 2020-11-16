@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="20dp">
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
+        android:textColor="@color/gray3"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/avatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/time"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="5dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:scaleType="centerCrop"
+        app:riv_oval="true" />
+
+    <com.wwsl.mdsj.custom.MyImageView
+        android:id="@+id/img"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@id/avatar"
+        android:adjustViewBounds="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        app:riv_corner_radius="5dp" />
+
+    <TextView
+        android:id="@+id/videoTitle"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/img"
+        android:layout_alignTop="@id/img"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:lines="2"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/videoAvatar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/videoTitle"
+        android:layout_alignStart="@id/videoTitle"
+        android:layout_marginTop="5dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:scaleType="centerCrop"
+        app:riv_oval="true" />
+
+    <TextView
+        android:id="@+id/videoUsername"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/videoAvatar"
+        android:layout_marginStart="3dp"
+        android:layout_toEndOf="@id/videoAvatar"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+
+</RelativeLayout>

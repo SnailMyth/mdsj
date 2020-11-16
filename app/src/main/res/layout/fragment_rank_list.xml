@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E81E85"
+    android:orientation="vertical">
+
+    <com.wwsl.mdsj.custom.MyLinearLayout1
+        android:id="@+id/radio_group_wrap"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/indicator">
+
+        <com.wwsl.mdsj.custom.MyFrameLayout1
+            android:id="@+id/btnLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/btn_day"
+                    android:layout_width="60dp"
+                    android:layout_height="26dp"
+                    android:background="@drawable/bg_list_btn"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="@string/main_list_day"
+                    android:textColor="@color/bg_list_btn_txt_color"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/btn_week"
+                    android:layout_width="60dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/bg_list_btn"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/main_list_week"
+                    android:textColor="@color/bg_list_btn_txt_color"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/btn_month"
+                    android:layout_width="60dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/bg_list_btn"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/main_list_month"
+                    android:textColor="@color/bg_list_btn_txt_color"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/btn_all"
+                    android:layout_width="60dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/bg_list_btn"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/main_list_all"
+                    android:textColor="@color/bg_list_btn_txt_color"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </RadioGroup>
+
+        </com.wwsl.mdsj.custom.MyFrameLayout1>
+    </com.wwsl.mdsj.custom.MyLinearLayout1>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top1Layout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:visibility="gone">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/top1Avatar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_default_active_avatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/imgTop1Frame"
+            app:riv_oval="true" />
+
+        <ImageView
+            android:id="@+id/imgTop1Frame"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/icon_rank_top1_frame_star" />
+
+
+        <TextView
+            android:id="@+id/txTop1Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="你所不知道的故事"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/imgTop1Frame"
+            app:layout_constraintStart_toStartOf="@id/imgTop1Frame"
+            app:layout_constraintTop_toBottomOf="@id/imgTop1Frame" />
+
+        <TextView
+            android:id="@+id/txTop1Num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="礼物：999,999.52"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@id/imgTop1Frame"
+            app:layout_constraintStart_toStartOf="@id/imgTop1Frame"
+            app:layout_constraintTop_toBottomOf="@id/txTop1Name" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/shape_white_radius_5"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.yanzhenjie.recyclerview.SwipeRecyclerView
+            android:id="@+id/dateRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:listitem="@layout/item_date_list_small" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

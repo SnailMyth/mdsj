@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/tools"
+    android:id="@+id/layoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/bg_title"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:onClick="backClick"
+            android:src="@mipmap/icon_back_white"
+            app:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/trendIndicator"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tl_textSelectColor="@color/white"
+            app:tl_textUnselectColor="@color/white"
+            tl:tl_indicator_color="#ffffff"
+            tl:tl_indicator_style="NORMAL"
+            tl:tl_indicator_width="30dp"
+            tl:tl_tab_padding="5dp"
+            tl:tl_tab_width="40dp"
+            tl:tl_textsize="15sp" />
+
+        <TextView
+            android:id="@+id/btnRelease"
+            android:layout_width="60dp"
+            android:layout_height="24dp"
+            android:text="发布"
+            android:gravity="center"
+            android:background="@drawable/shape_btn_publish"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_marginEnd="10dp"
+            android:onClick="releaseTrend"
+            app:layout_constraintBottom_toBottomOf="@+id/trendIndicator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/trendIndicator" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/layoutTrendPerson"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/trendViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

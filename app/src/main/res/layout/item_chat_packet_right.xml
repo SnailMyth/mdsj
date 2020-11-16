@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="20dp">
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
+        android:textColor="@color/gray3"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/avatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/time"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="15dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:scaleType="centerCrop"
+        app:riv_oval="true" />
+
+
+    <com.wwsl.mdsj.custom.BubbleLayout
+        android:id="@+id/layout"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/time"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@id/avatar"
+        android:adjustViewBounds="true"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:paddingStart="0dp"
+        android:paddingEnd="10dp"
+        app:arrowDirecrion="right"
+        app:arrowHeight="5dp"
+        app:arrowPositionY="20dp"
+        app:arrowWidth="10dp"
+        app:bubbleBgColor="#FC9C3D"
+        app:bubbleRadius="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivRedPacket"
+                android:layout_width="26dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@mipmap/icon_red_packet_1" />
+
+            <TextView
+                android:id="@+id/txRemark"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:ellipsize="end"
+                android:lines="2"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivRedPacket"
+                app:layout_constraintTop_toTopOf="@id/ivRedPacket" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/temp_tv_1" />
+
+            <TextView
+                android:id="@+id/temp_tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="3dp"
+                android:text="毛豆视界"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.wwsl.mdsj.custom.BubbleLayout>
+
+    <FrameLayout
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_alignTop="@id/layout"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@id/layout">
+
+        <ImageView
+            android:id="@+id/icon_fail"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/icon_chat_msg_warn"
+            android:visibility="invisible" />
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDrawable="@drawable/anim_loading"
+            android:indeterminateOnly="true"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+
+</RelativeLayout>

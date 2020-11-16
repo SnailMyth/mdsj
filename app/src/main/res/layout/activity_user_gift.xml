@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black2"
+    android:orientation="vertical"
+    tools:context=".activity.me.user.UserGiftActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/bg_title"
+        android:paddingTop="25dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:onClick="backClick"
+            android:src="@mipmap/return_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="70dp"
+            android:layout_marginEnd="70dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/me_gift"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tvBill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:onClick="showRule"
+            android:text="提现规则"
+            android:textColor="#6A7285"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="13dp"
+        android:background="@drawable/shape_bg_gift_withdraw"
+        app:layout_constraintTop_toBottomOf="@id/top">
+
+        <TextView
+            android:id="@+id/tvMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="30dp"
+            android:text="0.00"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="可提现金额"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvMoney"
+            app:layout_constraintStart_toStartOf="@+id/tvMoney"
+            app:layout_constraintTop_toBottomOf="@+id/tvMoney" />
+
+        <TextView
+            android:id="@+id/tvDeposit"
+            android:layout_width="107dp"
+            android:layout_height="31dp"
+            android:layout_marginEnd="26dp"
+            android:background="@drawable/bg_confirm2"
+            android:gravity="center"
+            android:onClick="depositNow"
+            android:text="@string/profit_cash"
+            android:textColor="#F97F21"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/record_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="?attr/selectableItemBackground"
+            android:text="提现记录 >"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/tvDeposit"
+            app:layout_constraintStart_toStartOf="@id/tvDeposit"
+            app:layout_constraintTop_toBottomOf="@id/tvDeposit" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/top">
+
+        <ImageView
+            android:id="@+id/imgExpendDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:onClick="showGiftExpend"
+            app:layout_constraintEnd_toStartOf="@id/imgTranslate"
+            app:layout_constraintStart_toEndOf="@id/imgIncomeDetail"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/icon_gift_expend_detail"
+            tools:layout_editor_absoluteX="157dp" />
+
+        <ImageView
+            android:id="@+id/imgIncomeDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showGiftInCome"
+            app:layout_constraintEnd_toStartOf="@+id/imgExpendDetail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imgExpendDetail"
+            app:srcCompat="@mipmap/icon_gift_income_detail" />
+
+        <ImageView
+            android:id="@+id/imgTranslate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="toDoudingExchange"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgExpendDetail"
+            app:layout_constraintTop_toTopOf="@id/imgExpendDetail"
+            app:srcCompat="@mipmap/icon_translate" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/imgTranslate"
+            app:layout_constraintEnd_toEndOf="@id/imgTranslate"
+            app:layout_constraintStart_toStartOf="@id/imgTranslate"
+            app:layout_constraintTop_toTopOf="@id/imgTranslate"
+            app:srcCompat="@mipmap/icon_translate_small" />
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="10dp"
+            android:text="礼物记录"
+            android:textColor="#ffffffff"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/imgIncomeDetail"
+            app:layout_constraintStart_toStartOf="@id/imgIncomeDetail"
+            app:layout_constraintTop_toBottomOf="@id/imgIncomeDetail" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="70dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="10dp"
+            android:text="打赏记录"
+            android:textColor="#ffffffff"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/imgExpendDetail"
+            app:layout_constraintStart_toStartOf="@id/imgExpendDetail"
+            app:layout_constraintTop_toBottomOf="@id/imgExpendDetail" />
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="10dp"
+            android:text="兑换豆丁"
+            android:textColor="#ffffffff"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/imgTranslate"
+            app:layout_constraintStart_toStartOf="@id/imgTranslate"
+            app:layout_constraintTop_toBottomOf="@id/imgTranslate" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="26dp"
+        android:background="#ff1e222d"
+        android:onClick="showBankCard"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="15dp"
+            android:text="我的银行卡"
+            android:textColor="#ffffffff"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/icon_me_right_arrow" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

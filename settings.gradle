@@ -1,0 +1,2 @@
+rootProject.name='mdsj'
+include ':app', ':tiui', ':game', ':video', ':fire',':beauty'

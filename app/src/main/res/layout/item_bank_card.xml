@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black2"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <com.shehuan.niv.NiceImageView
+        android:id="@+id/temp_iv"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/icon_bank_card_bg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCard1"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="6012"
+        android:textColor="#ffffffff"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@id/temp_iv"
+        app:layout_constraintStart_toStartOf="@id/temp_iv" />
+
+
+    <TextView
+        android:id="@+id/tvTempCard1"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginStart="20dp"
+        android:text="***"
+        android:textColor="#ffffffff"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvCard1"
+        app:layout_constraintStart_toEndOf="@id/tvCard1"
+        app:layout_constraintTop_toTopOf="@id/tvCard1" />
+
+
+    <TextView
+        android:id="@+id/tvTempCard2"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginStart="20dp"
+        android:text="****"
+        android:textColor="#ffffffff"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvTempCard1"
+        app:layout_constraintStart_toEndOf="@id/tvTempCard1"
+        app:layout_constraintTop_toTopOf="@id/tvTempCard1" />
+
+
+    <TextView
+        android:id="@+id/tvCard2"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginStart="20dp"
+        android:text="1234"
+        android:textColor="#ffffffff"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvTempCard2"
+        app:layout_constraintStart_toEndOf="@id/tvTempCard2"
+        app:layout_constraintTop_toTopOf="@id/tvTempCard2" />
+
+    <TextView
+        android:id="@+id/bankName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="平安银行"
+        android:textColor="#ffffffff"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvCard1"
+        app:layout_constraintStart_toStartOf="@+id/tvCard1"
+        app:layout_constraintTop_toTopOf="@+id/temp_iv" />
+
+
+    <TextView
+        android:id="@+id/realName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="张三"
+        android:textColor="#ffffffff"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bankName"
+        app:layout_constraintStart_toEndOf="@+id/bankName"
+        app:layout_constraintTop_toTopOf="@+id/bankName" />
+
+    <TextView
+        android:id="@+id/txDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/bg_confirm"
+        android:paddingStart="5dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="2dp"
+        android:text="@string/delete"
+        android:textColor="@color/white"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/temp_iv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

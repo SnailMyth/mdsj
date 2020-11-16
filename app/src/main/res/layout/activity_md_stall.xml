@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/img_maodou_stall_bg"
+    tools:context=".activity.maodou.MdStallActivity">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="180dp"
+        android:layout_height="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/icon_stall_head" />
+
+    <ImageView
+        android:id="@+id/btnMd"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="clickStartStall"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnDd"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@mipmap/icon_md_start_stall" />
+
+    <ImageView
+        android:id="@+id/btnDd"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:onClick="clickMd"
+        app:layout_constraintBottom_toBottomOf="@id/btnMd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnMd"
+        android:background="@mipmap/icon_btn_md" />
+
+    <ImageView
+        android:id="@+id/ivLeft"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="backClick"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/icon_stall_left_arrow" />
+
+    <ImageView
+        android:id="@+id/ivPackage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:onClick="goPackage"
+        app:layout_constraintStart_toEndOf="@id/imageView3"
+        app:layout_constraintTop_toTopOf="@id/ivLeft"
+        app:srcCompat="@mipmap/icon_stall_package" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/leftStall1"
+        android:layout_width="160dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="10dp"
+        android:background="@color/transparent"
+        android:onClick="goDetail"
+        app:layout_constraintBottom_toTopOf="@id/leftStall2"
+        app:layout_constraintEnd_toStartOf="@id/rightStall1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView3">
+
+
+        <ImageView
+            android:id="@+id/temp_iv_1"
+            android:layout_width="0dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="22.5dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/icon_stall_bg" />
+
+        <ImageView
+            android:id="@+id/icon1"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:elevation="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/icon_dd" />
+
+        <TextView
+            android:id="@+id/tvTitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginEnd="3dp"
+            android:gravity="end"
+            android:text="毛豆/199.00个豆丁"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/temp_iv_1"
+            app:layout_constraintEnd_toEndOf="@id/temp_iv_1"
+            app:layout_constraintTop_toTopOf="@id/temp_iv_1" />
+
+        <TextView
+            android:id="@+id/tvName1"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginEnd="5dp"
+            android:text="傻二哈的地摊"
+            android:textColor="#fc1f00"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvTitle1"
+            app:layout_constraintTop_toBottomOf="@id/temp_iv_1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/leftStall2"
+        android:layout_width="160dp"
+        android:layout_height="55dp"
+        android:background="@color/transparent"
+        android:onClick="goDetail"
+        app:layout_constraintBottom_toTopOf="@id/leftStall3"
+        app:layout_constraintStart_toStartOf="@id/leftStall1"
+        app:layout_constraintTop_toBottomOf="@id/leftStall1">
+
+
+        <ImageView
+            android:id="@+id/temp_iv_2"
+            android:layout_width="0dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="22.5dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/icon_stall_bg" />
+
+        <ImageView
+            android:id="@+id/icon2"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:elevation="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/icon_dd" />
+
+        <TextView
+            android:id="@+id/tvTitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginEnd="3dp"
+            android:gravity="end"
+            android:text="毛豆/199.00个豆丁"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/temp_iv_2"
+            app:layout_constraintEnd_toEndOf="@id/temp_iv_2"
+            app:layout_constraintTop_toTopOf="@id/temp_iv_2" />
+
+        <TextView
+            android:id="@+id/tvName2"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginEnd="5dp"
+            android:text="傻二哈的地摊"
+            android:textColor="#fc1f00"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvTitle2"
+            app:layout_constraintTop_toBottomOf="@id/temp_iv_2" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/leftStall3"
+        android:layout_width="160dp"
+        android:layout_height="55dp"
+        android:background="@color/transparent"
+        android:onClick="goDetail"
+        app:layout_constraintBottom_toTopOf="@+id/btnMd"
+        app:layout_constraintStart_toStartOf="@id/leftStall1"
+        app:layout_constraintTop_toBottomOf="@+id/leftStall2">
+
+
+        <ImageView
+            android:id="@+id/temp_iv_3"
+            android:layout_width="0dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="22.5dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/icon_stall_bg" />
+
+        <ImageView
+            android:id="@+id/icon3"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:elevation="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/icon_dd" />
+
+        <TextView
+            android:id="@+id/tvTitle3"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginEnd="3dp"
+            android:gravity="end"
+            android:text="毛豆/199.00个豆丁"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/temp_iv_3"
+            app:layout_constraintEnd_toEndOf="@id/temp_iv_3"
+            app:layout_constraintTop_toTopOf="@id/temp_iv_3" />
+
+        <TextView
+            android:id="@+id/tvName3"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginEnd="5dp"
+            android:text="傻二哈的地摊"
+            android:textColor="#fc1f00"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvTitle3"
+            app:layout_constraintTop_toBottomOf="@id/temp_iv_3" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rightStall1"
+        android:layout_width="160dp"
+        android:layout_height="55dp"
+        android:background="@color/transparent"
+        android:onClick="goDetail"
+        app:layout_constraintBottom_toTopOf="@id/rightStall2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/leftStall1"
+        app:layout_constraintTop_toBottomOf="@id/imageView3">
+
+
+        <ImageView
+            android:id="@+id/temp_iv_4"
+            android:layout_width="0dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="22.5dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/icon_stall_bg" />
+
+        <ImageView
+            android:id="@+id/icon4"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:elevation="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/icon_dd" />
+
+        <TextView
+            android:id="@+id/tvTitle4"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginEnd="3dp"
+            android:gravity="end"
+            android:text="毛豆/199.00个豆丁"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/temp_iv_4"
+            app:layout_constraintEnd_toEndOf="@id/temp_iv_4"
+            app:layout_constraintTop_toTopOf="@id/temp_iv_4" />
+
+        <TextView
+            android:id="@+id/tvName4"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginEnd="5dp"
+            android:text="傻二哈的地摊"
+            android:textColor="#fc1f00"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvTitle4"
+            app:layout_constraintTop_toBottomOf="@id/temp_iv_4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rightStall2"
+        android:layout_width="160dp"
+        android:layout_height="55dp"
+        android:background="@color/transparent"
+        android:onClick="goDetail"
+        app:layout_constraintBottom_toTopOf="@+id/btnDd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/leftStall1"
+        app:layout_constraintTop_toBottomOf="@+id/rightStall1">
+
+
+        <ImageView
+            android:id="@+id/temp_iv_5"
+            android:layout_width="0dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="22.5dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/icon_stall_bg" />
+
+        <ImageView
+            android:id="@+id/icon5"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:elevation="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/icon_dd" />
+
+        <TextView
+            android:id="@+id/tvTitle5"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginEnd="3dp"
+            android:gravity="end"
+            android:text="毛豆/199.00个豆丁"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/temp_iv_5"
+            app:layout_constraintEnd_toEndOf="@id/temp_iv_5"
+            app:layout_constraintTop_toTopOf="@id/temp_iv_5" />
+
+        <TextView
+            android:id="@+id/tvName5"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginEnd="5dp"
+            android:text="傻二哈的地摊"
+            android:textColor="#fc1f00"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvTitle5"
+            app:layout_constraintTop_toBottomOf="@id/temp_iv_5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

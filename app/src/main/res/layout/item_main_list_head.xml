@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black2"
+    android:paddingTop="22dp">
+
+    <!--<com.tongchuang.phonelive.custom.RatioImageView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:scaleType="fitXY"-->
+    <!--android:src="@mipmap/bg_list"-->
+    <!--android:translationY="-110dp"-->
+    <!--app:ri_ratio="0.973"-->
+    <!--/>-->
+
+    <RelativeLayout
+        android:id="@+id/item_1"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/wrap_1"
+                android:layout_width="107dp"
+                android:layout_height="132dp"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/icon_main_list_head_1" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/avatar_1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignBottom="@id/wrap_1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="3dp"
+                android:scaleType="centerCrop"
+                app:riv_oval="true" />
+
+            <TextView
+                android:id="@+id/name_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wrap_1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/votes_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name_1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:drawableLeft="@mipmap/icon_charge_coin_small"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_2"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|bottom"
+        android:layout_marginBottom="20dp">
+
+        <RelativeLayout
+            android:id="@+id/data_group_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/wrap_2"
+                android:layout_width="67dp"
+                android:layout_height="86dp"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/icon_main_list_head_2" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/avatar_2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignBottom="@id/wrap_2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="3dp"
+                android:scaleType="centerCrop"
+                app:riv_oval="true" />
+
+            <TextView
+                android:id="@+id/name_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wrap_2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/votes_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name_2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:drawableLeft="@mipmap/icon_charge_coin_small"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/no_data_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="12dp"
+            android:visibility="invisible">
+
+            <ImageView
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:src="@mipmap/icon_main_list_no_data" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="@string/main_list_no_data_2"
+                android:textColor="@color/gray3"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_3"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|right|bottom"
+        android:layout_marginBottom="20dp">
+
+        <RelativeLayout
+            android:id="@+id/data_group_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/wrap_3"
+                android:layout_width="67dp"
+                android:layout_height="86dp"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/icon_main_list_head_3" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/avatar_3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignBottom="@id/wrap_3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="3dp"
+                android:scaleType="centerCrop"
+                app:riv_oval="true" />
+
+            <TextView
+                android:id="@+id/name_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wrap_3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/votes_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name_3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:drawableLeft="@mipmap/icon_charge_coin_small"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/no_data_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="12dp"
+            android:visibility="invisible">
+
+            <ImageView
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:src="@mipmap/icon_main_list_no_data" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="@string/main_list_no_data_2"
+                android:textColor="@color/gray3"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</FrameLayout>

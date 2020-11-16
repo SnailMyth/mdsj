@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg_F7"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title" />
+
+
+    <View style="@style/line2" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="输入密码"
+            android:textColor="@color/textColor3"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edit_new"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="80dp"
+            android:background="@null"
+            android:hint="请填写支付密码"
+            android:inputType="textPassword"
+            android:textColor="@color/textColor3"
+            android:textColorHint="@color/textColorC"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <View style="@style/line2" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/modify_pwd_confirm"
+            android:textColor="@color/textColor3"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edit_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="80dp"
+            android:background="@null"
+            android:hint="请填写支付密码"
+            android:inputType="textPassword"
+            android:textColor="@color/textColor3"
+            android:textColorHint="@color/textColorC"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/modify_pwd_btn"
+        android:gravity="center"
+        android:text="确认"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+</LinearLayout>

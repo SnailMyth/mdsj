@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutListItemBg"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_marginStart="13dp"
+    android:layout_marginEnd="13dp"
+    android:background="@color/black2"
+    android:descendantFocusability="blocksDescendants">
+
+    <View
+        android:id="@+id/viewItemDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#D8D8D8" />
+
+    <TextView
+        android:id="@+id/order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="13dp"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="13dp"
+        android:layout_toEndOf="@id/order"
+        android:scaleType="centerCrop"
+        app:riv_oval="true" />
+
+    <TextView
+        android:id="@+id/votes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="13dp"
+        android:drawableStart="@mipmap/icon_charge_coin_small"
+        android:drawablePadding="4dp"
+        android:textColor="#EA4040"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/avatar"
+        android:layout_marginEnd="13dp"
+        android:layout_toStartOf="@id/votes"
+        android:layout_toEndOf="@id/avatar"
+        android:ellipsize="end"
+        android:maxWidth="100dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/imgLiving"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_alignStart="@id/name"
+        android:layout_marginTop="3dp"
+        android:drawableStart="@mipmap/icon_living"
+        android:drawablePadding="5dp"
+        android:text="直播中"
+        android:textColor="#EB1F6B"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/userLevel"
+        android:layout_width="65dp"
+        android:layout_height="18dp"
+        android:layout_below="@id/name"
+        android:layout_alignStart="@id/name"
+        android:layout_marginTop="3dp"
+        android:background="@mipmap/icon_user_level_high"
+        android:gravity="center|end"
+        android:paddingStart="2dp"
+        android:paddingEnd="15dp"
+        android:text="11"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+</RelativeLayout>

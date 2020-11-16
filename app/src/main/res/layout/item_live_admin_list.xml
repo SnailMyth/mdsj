@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="2dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/avatar"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/icon_test"
+        app:riv_oval="true" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/avatar"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@id/avatar"
+        android:ellipsize="end"
+        android:maxWidth="130dp"
+        android:singleLine="true"
+        android:text="达达所多撒大所多撒多所大所多撒多撒"
+        android:textColor="@color/textColor2New"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/level_anchor"
+        android:layout_width="30dp"
+        android:layout_height="15dp"
+        android:layout_alignTop="@id/name"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@id/name" />
+
+    <ImageView
+        android:id="@+id/level"
+        android:layout_width="30dp"
+        android:layout_height="15dp"
+        android:layout_alignTop="@id/level_anchor"
+        android:layout_marginStart="12dp"
+        android:layout_toRightOf="@id/level_anchor"
+        android:src="@mipmap/icon_test_2" />
+
+    <ImageView
+        android:id="@+id/sex"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignTop="@id/level"
+        android:layout_marginStart="12dp"
+        android:layout_toRightOf="@id/level"
+        android:src="@mipmap/icon_sex_male" />
+
+
+    <TextView
+        android:id="@+id/tvSign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/avatar"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="1dp"
+        android:layout_toRightOf="@id/avatar"
+        android:ellipsize="end"
+        android:maxWidth="130dp"
+        android:singleLine="true"
+        android:text="副科级拉风副科级拉风副科"
+        android:textColor="@color/textColor9"
+        android:textSize="13sp" />
+
+    <ImageView
+        android:id="@+id/btn_delete"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:scaleType="center"
+        android:src="@mipmap/icon_live_admin_delete" />
+
+    <View
+        style="@style/line2"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp" />
+</RelativeLayout>

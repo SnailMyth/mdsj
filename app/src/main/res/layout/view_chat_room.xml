@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black2"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/status_color">
+        <TextView
+            android:id="@+id/titleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:layout_marginStart="20dp"
+            android:onClick="backClick"
+            app:tint="@color/white"
+            android:src="@mipmap/icon_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/btn_user_home"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:src="@mipmap/icon_chat_user"
+            app:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View style="@style/line2" />
+
+    <LinearLayout
+        android:id="@+id/btn_follow_group"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/black2"
+        android:paddingLeft="15dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/btn_close_follow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:padding="7dp"
+            android:src="@mipmap/icon_live_ready_close"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="@string/im_follow_tip"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/btn_follow"
+            android:layout_width="44dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/bg_btn_follow"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/follow"
+            android:textColor="@color/global"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="#ff202226"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.wwsl.mdsj.custom.DrawableCheckBox
+            android:id="@+id/btn_voice_record"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:button="@null"
+            android:checked="false"
+            android:drawableTint="@color/gray1"
+            android:paddingLeft="10dp"
+            app:dt_left_drawable="@drawable/bg_chat_btn_voice"
+            app:dt_left_height="26dp"
+            app:dt_left_width="26dp" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_chat_room_input"
+                android:backgroundTint="#7E7E7E"
+                android:gravity="center_vertical"
+                android:hint="@string/im_send_msg"
+                android:imeActionLabel="@string/send"
+                android:imeOptions="actionSend"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/btn_voice_record_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_chat_voice_record_0"
+                android:backgroundTint="#7E7E7E"
+                android:gravity="center"
+                android:text="@string/im_press_say"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:visibility="invisible" />
+
+        </FrameLayout>
+
+
+        <com.wwsl.mdsj.custom.DrawableCheckBox
+            android:id="@+id/btn_face"
+            android:layout_width="36dp"
+            android:layout_height="46dp"
+            android:button="@null"
+            android:checked="false"
+            android:drawableTint="@color/gray1"
+            app:dt_right_drawable="@drawable/bg_chat_btn_face"
+            app:dt_right_height="26dp"
+            app:dt_right_width="26dp" />
+
+        <ImageView
+            android:id="@+id/btn_add"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@mipmap/icon_chat_add"
+            app:tint="@color/gray1" />
+    </LinearLayout>
+</LinearLayout>

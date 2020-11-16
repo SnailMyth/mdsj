@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:background="@drawable/shape_border_20"
+        android:backgroundTint="#2C3241"
+        android:translationY="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:text="土地详情"
+            android:textColor="#ffffffff"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/temp_tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:text="土地名称："
+            android:textColor="#ffababab"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="体验秘籍"
+            android:textColor="#ffffffff"
+            android:textSize="16sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/temp_tv_1"
+            app:layout_constraintStart_toEndOf="@+id/temp_tv_1" />
+
+
+        <TextView
+            android:id="@+id/temp_tv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="拥有所需："
+            android:textColor="#ffababab"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/temp_tv_1"
+            app:layout_constraintTop_toBottomOf="@id/temp_tv_1" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/needNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="188 颗"
+            android:textColor="#ffffffff"
+            android:textSize="16sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/temp_tv_2"
+            app:layout_constraintStart_toEndOf="@+id/temp_tv_2" />
+
+
+        <TextView
+            android:id="@+id/temp_tv_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="可收毛豆："
+            android:textColor="#ffababab"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/temp_tv_1"
+            app:layout_constraintTop_toBottomOf="@id/temp_tv_2" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/resNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="188 颗"
+            android:textColor="#ffffffff"
+            android:textSize="16sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/temp_tv_3"
+            app:layout_constraintStart_toEndOf="@id/temp_tv_3" />
+
+
+
+        <TextView
+            android:id="@+id/temp_tv_5"
+            android:layout_marginTop="9dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="兑换后活跃度加："
+            android:textColor="#ffababab"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/temp_tv_1"
+            app:layout_constraintTop_toBottomOf="@+id/temp_tv_3" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/activeAddNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="1.00"
+            android:textColor="#ffffffff"
+            android:textSize="16sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/temp_tv_5"
+            app:layout_constraintStart_toEndOf="@id/temp_tv_5" />
+
+
+        <TextView
+            android:id="@+id/temp_tv_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="可同时拥有："
+            android:textColor="#ffababab"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/temp_tv_1"
+            app:layout_constraintTop_toBottomOf="@id/temp_tv_5" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/sameTimeNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="8个"
+            android:textColor="#ffffffff"
+            android:textSize="16sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/temp_tv_6"
+            app:layout_constraintStart_toEndOf="@id/temp_tv_6" />
+
+
+        <TextView
+            android:id="@+id/temp_tv_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="土地有效期："
+            android:textColor="#ffababab"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/temp_tv_1"
+            app:layout_constraintTop_toBottomOf="@id/temp_tv_6" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/taskExpired"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="15天"
+            android:textColor="#ffffffff"
+            android:textSize="16sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/temp_tv_7"
+            app:layout_constraintStart_toEndOf="@id/temp_tv_7" />
+
+        <TextView
+            android:id="@+id/temp_tv_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="活跃度的有效期："
+            android:textColor="#ffababab"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/temp_tv_1"
+            app:layout_constraintTop_toBottomOf="@id/temp_tv_7" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/activeExpired"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="15天"
+            android:textColor="#ffffffff"
+            android:textSize="16sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/temp_tv_8"
+            app:layout_constraintStart_toEndOf="@id/temp_tv_8" />
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="20dp"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/textView24"
+            app:srcCompat="@mipmap/icon_wish_bill_gift_close" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
